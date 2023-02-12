@@ -1,0 +1,40 @@
+<form>
+  <label for="textInput">Champ de texte :</label>
+  <input type="text" id="textInput" name="textInput">
+
+  <label for="numberInput">Champ de nombre :</label>
+  <input type="number" id="numberInput" name="numberInput">
+
+  <label for="selectInput">Liste déroulante :</label>
+  <select id="selectInput" name="selectInput">
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+  </select>
+
+  <label for="checkboxInput">Case à cocher :</label>
+  <input type="checkbox" id="checkboxInput" name="checkboxInput">
+</form>
+
+<script>
+  const textInput = document.querySelector("#textInput");
+  const numberInput = document.querySelector("#numberInput");
+  const selectInput = document.querySelector("#selectInput");
+  const checkboxInput = document.querySelector("#checkboxInput");
+
+  textInput.addEventListener("input", function() {
+    console.log("Le champ de texte a été modifié : " + textInput.value);
+  });
+
+  numberInput.addEventListener("input", function() {
+    console.log("Le champ de nombre a été modifié : " + numberInput.value);
+  });
+
+  selectInput.addEventListener("change", function() {
+    console.log("La liste déroulante a été modifiée : " + selectInput.value);
+  });
+
+  checkboxInput.addEventListener("change", function() {
+    console.log("La case à cocher a été modifiée : " + checkboxInput.checked);
+  });
+</script>
